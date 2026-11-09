@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f6f2fb"><title>Silver Wing · Codex 龙翼少女助手</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="#" aria-label="Codex 龙翼少女助手首页"><span class="mark">⌘</span> CODEX <span class="pill">龙翼少女助手</span></a><label class="motion"><input id="reduce" type="checkbox"> 减少动态效果</label></header>
+<main id="app" class="intro">
+<section class="stage" aria-label="龙翼少女动画"><div class="halo"></div><div class="orbit"></div><div id="particles" aria-hidden="true"></div>
+<button class="character" id="character" aria-label="与龙翼少女互动：眨眼、挥手">
+<svg viewBox="0 0 518 424" role="img" aria-label="银白长发、紫眼龙角、淡紫龙翼和白紫长裙的少女">
+<defs>
+<clipPath id="hair"><path d="M187 146 Q201 133 208 131 L204 170 Q195 194 179 192 Q173 181 187 166 Z"/></clipPath><clipPath id="hem"><path d="M155 348 Q177 365 197 365 L213 382 Q230 385 238 392 Q223 407 204 397 Q185 395 175 394 L144 390 Q136 382 155 377 Z"/></clipPath><clipPath id="left"><path d="M94 182 Q92 124 184 83 L218 112 L208 152 Q174 137 151 160 Q133 148 111 169 Z"/></clipPath>
+<clipPath id="right"><path d="M292 112 L328 83 Q407 111 424 183 L409 167 Q383 145 364 160 Q341 139 309 155 Z"/></clipPath>
+<clipPath id="tail"><path d="M327 232 Q389 234 398 292 Q405 343 362 369 L337 354 Q382 328 366 287 Z"/></clipPath>
+<clipPath id="hand"><path d="M309 174 L326 189 L341 211 L333 222 L313 202 L302 185 Z"/></clipPath>
+<mask id="body"><rect width="518" height="424" fill="white"/><g fill="black"><path d="M187 146 Q201 133 208 131 L204 170 Q195 194 179 192 Q173 181 187 166 Z"/><path d="M155 348 Q177 365 197 365 L213 382 Q230 385 238 392 Q223 407 204 397 Q185 395 175 394 L144 390 Q136 382 155 377 Z"/><path d="M94 182 Q92 124 184 83 L218 112 L208 152 Q174 137 151 160 Q133 148 111 169 Z"/><path d="M292 112 L328 83 Q407 111 424 183 L409 167 Q383 145 364 160 Q341 139 309 155 Z"/><path d="M327 232 Q389 234 398 292 Q405 343 362 369 L337 354 Q382 328 366 287 Z"/><path d="M309 174 L326 189 L341 211 L333 222 L313 202 L302 185 Z"/></g></mask>
+</defs>
+<image class="body-layer" href="assets/dragon.jpg" width="518" height="424" mask="url(#body)"/>
+<g class="wing left"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#left)"/></g>
+<g class="wing right"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#right)"/></g>
+<g class="tail"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#tail)"/></g>
+<g class="hand"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#hand)"/></g>
+<g class="hair-tip"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#hair)"/></g><g class="hem"><image href="assets/dragon.jpg" width="518" height="424" clip-path="url(#hem)"/></g><g class="smile"><ellipse cx="258" cy="78" rx="4" ry="2.2" fill="#efdfdf"/><path d="M255 77.5 Q258 80 261 77.5" fill="none" stroke="#ae7d96" stroke-width=".65" stroke-linecap="round"/></g><g class="eyelids"><path d="M245 66 Q250 70 255 66 M263 66 Q268 70 273 66" fill="none" stroke="#e8deed" stroke-width="6"/><path d="M245 67 Q250 70 255 67 M263 67 Q268 70 273 67" fill="none" stroke="#685571" stroke-width="1.2"/></g>
+</svg></button>
+<div class="stage-label"><span class="status-dot"></span><span id="status" role="status" aria-live="polite">正在唤醒龙翼少女…</span></div>
+</section>
+<section class="content"><div class="eyebrow">YOUR LITTLE WINGED COMPANION</div><h1><span class="codex-title">CODEX</span><span class="home-title">灵感，<br>即刻展翼。</span></h1><p class="description">一位来自白紫色微光中的伙伴。<br>陪你迎接每一次新的创造。</p><div class="actions"><button id="enter" class="primary">进入 Codex <span>↗</span></button><button id="replay" class="secondary">↻ 重新播放启动动画</button></div><div id="home" class="home-panel" hidden><div><span class="spark">✧</span><strong>龙翼少女已就绪</strong></div><p>轻点少女，向她打个招呼。<br>准备好后，前往 Codex 开始创作。</p><span class="tag">独立动漫助手 · 本地预览</span></div></section>
+<div class="progress" aria-hidden="true"><div></div></div>
+</main><footer><span>CODEX · DRAGON WING COMPANION</span><span>独立同人界面，非官方应用启动动画</span></footer>
+<dialog id="launch"><h2>进入 Codex</h2><p>此独立预览不会控制或修改官方应用。Mac 上请从 Dock 打开已安装的 Codex；iPhone / iPad 可前往网页版。</p><a class="primary" href="https://chatgpt.com/codex" target="_blank" rel="noopener noreferrer">打开 Codex 网页版 ↗</a><button id="close" class="secondary">留在少女助手</button></dialog>
+<script src="app.js"></script></body></html>
